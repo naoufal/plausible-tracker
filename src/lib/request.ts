@@ -48,8 +48,7 @@ export function sendEvent(
     );
   }
 
-  const shouldIgnoreCurrentBrowser =
-    localStorage.getItem('plausible_ignore') === 'true';
+  const shouldIgnoreCurrentBrowser = false;
   if (shouldIgnoreCurrentBrowser) {
     return console.warn(
       '[Plausible] Ignoring event because "plausible_ignore" is set to "true" in localStorage'
